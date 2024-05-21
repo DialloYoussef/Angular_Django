@@ -4,11 +4,14 @@ import { StudentListComponent } from './features/student-list/student-list.compo
 import { AddStudentComponent } from './features/add-student/add-student.component';
 import { EditStudentComponent } from './features/edit-student/edit-student.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: StudentListComponent },
   { path: 'add-student', component: AddStudentComponent },
   { path: 'edit-student/:id', component: EditStudentComponent },
+  { path: '', redirectTo: '/student-list', pathMatch: 'full' }
+
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
